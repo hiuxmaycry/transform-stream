@@ -1,9 +1,5 @@
 import { Stream, Transform } from 'stream';
 
-export default {
-  transformStream
-};
-
 function buildJSONStreamingEvent(data) {
   return Buffer.from(`${JSON.stringify(data)}\n`);
 }
@@ -66,11 +62,7 @@ function createTransform(onMessage, onFailure) {
   });
 }
 
-function transformStream({
-  stream,
-  onMessage,
-  onFailure = () => null
-}: {
+export default function transformStream({ stream, onMessage, onFailure = () => null }: {
   stream: Stream;
   onMessage: (message, encoding) => string;
   onFailure: () => void;
