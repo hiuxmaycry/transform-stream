@@ -1,6 +1,6 @@
 {
   "name": "@hiuxmaycry/transform-stream",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Transform stream",
   "main": "index.js",
   "scripts": {
