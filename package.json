@@ -1,7 +1,7 @@
 {
-  "name": "@hiuxmaycry/transform-stream",
+  "name": "simple-transform-stream",
   "version": "1.0.2",
-  "description": "Transform stream",
+  "description": "Simple transform stream",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -12,6 +12,8 @@
   },
   "keywords": [
     "transform",
+    "simple",
+    "json",
     "stream"
   ],
   "author": "Nicolas Walter Araya",
