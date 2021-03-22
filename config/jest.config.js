@@ -7,14 +7,11 @@ module.exports = {
     './lib': { lines: 80 }
   },
   transform: {
-    "^.+\\.js$": "babel-jest",
-    "^.+\\.ts$": "babel-jest",
-    "^.+\\.tsx$": "babel-jest",
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.ts$': 'babel-jest',
+    '^.+\\.tsx$': 'babel-jest'
   },
   testEnvironment: 'node',
-  reporters: ["default"],
+  reporters: ['default'],
   restoreMocks: true
 };
-
-
-

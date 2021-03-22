@@ -62,7 +62,11 @@ function createTransform(onMessage, onFailure) {
   });
 }
 
-export default function transformStream({ stream, onMessage, onFailure = () => null }: {
+export default function transformStream({
+  stream,
+  onMessage,
+  onFailure = () => null
+}: {
   stream: Stream;
   onMessage: (message, encoding) => string;
   onFailure: () => void;
