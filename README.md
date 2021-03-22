@@ -16,13 +16,7 @@ To get the transform stream object:
 
 ```js
 const transformStream = require('transformStream');
-const values = [
-  { value: 1, type: 'begin' },
-  { value: 2, type: 'hit' },
-  { value: 3, type: 'hit' },
-  { value: 4, type: 'end' }
-];
-const inputStream = createRandomStream();
+const inputStream = createJSONStream();
 /* Input have a stream of valid JSON objects
   { value: 1, type: 'begin' }\n
   { value: 2, type: 'hit' }\n
