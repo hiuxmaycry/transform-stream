@@ -8,7 +8,9 @@ If you think I've missed something, be sure to open an issue or submit a pull re
 
 First install the `simple-transform-stream` library:
 
+```console
   $ npm i simple-transform-stream
+```
 
 ## Usage
 
