@@ -22,26 +22,31 @@ const values = [
   { value: 3, type: 'hit' },
   { value: 4, type: 'end' }
 ];
-const expectedResult = [
-  JSON.stringify({ value: 2, type: 'begin' }),
-  JSON.stringify({ value: 4, type: 'hit' }),
-  JSON.stringify({ value: 6, type: 'hit' }),
-  JSON.stringify({ value: 8, type: 'end' })
-];
-const inputStream = new Readable({
-  read() {
-    this.push(JSON.stringify(values[count]));
-    count += 1;
-    if (count === values.length) {
-      this.push(null);
-    }
-  }
+const inputStream = createRandomStream();
+/* Input have a stream of valid JSON objects
+  { value: 1, type: 'begin' }\n
+  { value: 2, type: 'hit' }\n
+  { value: 3, type: 'hit' }\n
+  { value: 4, type: 'end' }\n
+  null
+*/
+const onMessage = async (message) => ({
+  ...message,
+  value: message.value * 2
 });
+const onFailure = (error, message) => console.error(error, message);
 const transformedStream = transformStream({
   stream: inputStream,
-  onMessage
+  onMessage,
+  onFailure
 });
-
+/* New transformed stream have values
+  { value: 2, type: 'begin' }\n
+  { value: 4, type: 'hit' }\n
+  { value: 6, type: 'hit' }\n
+  { value: 8, type: 'end' }\n
+  null
+*/
 ```
 
 ## License
