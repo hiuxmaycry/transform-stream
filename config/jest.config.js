@@ -4,7 +4,7 @@ module.exports = {
   testRegex: 'lib/.*.test.(js|ts|tsx)$',
   coveragePathIgnorePatterns: ['/node_modules'],
   coverageThreshold: {
-    './lib': { lines: 80 }
+    './lib': { lines: 90 }
   },
   transform: {
     '^.+\\.js$': 'babel-jest',

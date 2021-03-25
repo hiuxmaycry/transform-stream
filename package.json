@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint lib/ config/",
-    "test": "npm run lint && npm run test:jest",
-    "test:jest": "jest --config config/jest.config.js --verbose --coverage --forceExit"
+    "test": "npm run lint && npm run unit",
+    "unit": "jest --config config/jest.config.js --verbose --coverage --forceExit",
+    "tdd": "jest --config config/jest.config.js --verbose --detectOpenHandles --watch"
   },
   "repository": {
     "type": "git",
