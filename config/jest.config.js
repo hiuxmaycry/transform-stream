@@ -1,7 +1,7 @@
 module.exports = {
   rootDir: '../',
   setupFilesAfterEnv: ['<rootDir>/config/setup.js'],
-  testRegex: 'lib/.*.test.(js|ts|tsx)$',
+  testRegex: 'src/.*.test.(js|ts|tsx)$',
   coveragePathIgnorePatterns: ['/node_modules'],
   coverageThreshold: {
     './lib': { lines: 90 }

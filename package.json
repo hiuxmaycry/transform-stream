@@ -1,10 +1,10 @@
 {
   "name": "simple-transform-stream",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple transform stream",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint lib/ config/",
+    "lint": "eslint src/ config/",
     "test": "npm run lint && npm run unit",
     "unit": "jest --config config/jest.config.js --verbose --coverage --forceExit",
     "tdd": "jest --config config/jest.config.js --verbose --detectOpenHandles --watch"
