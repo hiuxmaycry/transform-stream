@@ -1,6 +1,6 @@
 {
   "name": "simple-transform-stream",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple transform stream",
   "main": "index.js",
   "scripts": {
